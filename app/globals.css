@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@layer base {
+  /* Sur mobile (écrans de moins de 768px), on réduit la taille de base de l'écriture */
+  html {
+    font-size: 14px;
+  }
+
+  /* Sur ordinateur, on remet la taille standard */
+  @media (min-width: 768px) {
+    html {
+      font-size: 16px;
+    }
+  }
+}
