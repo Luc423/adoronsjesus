@@ -54,7 +54,7 @@ export default function EvenementsPage() {
           <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
             <p>
              Dans le cadre de la Vigile de la Toussaint, nous vous
-invitons à notre grande Veillée de prière et d’adoration.
+invitons à notre grande Veillée de prières et d’adoration.
 Nous prierons pour vous en invoquant l'intercession de
 tous les saints en la présence réelle de Dieu.
             </p>
