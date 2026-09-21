@@ -4,11 +4,13 @@ import Image from 'next/image';
 
 // Génère un tableau de 20 images
 const images = Array.from({ length: 20 }, (_, i) => `/images/photo${i + 1}.jpg`);
-const [isOpen, setIsOpen] = useState(false);
 
 export default function EvenementsPage() {
   // Index de la photo actuellement zoomée (null si aucune n'est ouverte)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+  
+  // État pour la modale de la retraite
+  const [isRetraiteOpen, setIsRetraiteOpen] = useState(false);
 
   // Aller à l'image suivante dans la lightbox
   const nextLightboxImage = (e: React.MouseEvent) => {
@@ -28,12 +30,12 @@ export default function EvenementsPage() {
 
   return (
     <main className="max-w-4xl mx-auto px-4 sm:px-6 py-16">
-      
+       
       {/* GRAND TITRE DE LA PAGE CENTRÉ */}
       <div className="text-center mb-16">
         <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold tracking-wider text-black uppercase mb-4 break-words">
-  Évènements
-</h1>
+          Évènements
+        </h1>
         <h2 className="text-xl md:text-2xl font-serif italic text-gray-500">
           Veillée, Retraite et Sommet
         </h2>
@@ -41,15 +43,14 @@ export default function EvenementsPage() {
 
       {/* 1. Titre de l'évènement */}
       <div className="mb-8">
-    <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENTS : <br></br>VEILLÉES DE PRIÈRES ET D’ADORATION&nbsp;</h3>
-  
-
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENTS : <br />VEILLÉES DE PRIÈRES ET D’ADORATION&nbsp;</h3>
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">31 octobre 2026</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Bagneux(92)</span>
         </div>
       </div>
-{/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
+
+      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
       <section className="mb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
           <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
@@ -67,113 +68,110 @@ tous les saints en la présence réelle de Dieu.
 enseignement, intercession, confessions.
             </p>
             <p>
-              <strong>Dress code : </strong> tous en blanc ! </p>
-              <p>
+              <strong>Dress code : </strong> tous en blanc ! 
+            </p>
+            <p>
               <strong>
-  Rendez-vous Samedi 31 Octobre<br />
-  Eglise St Hermeland<br />
-  Accueil à partir de 19h30<br />
-  Veillée 20h-23h
-</strong></p>
-
+                Rendez-vous Samedi 31 Octobre<br />
+                Eglise St Hermeland<br />
+                Accueil à partir de 19h30<br />
+                Veillée 20h-23h
+              </strong>
+            </p>
           </div>
           
-          {/* AJOUT DE md:-mt-8 : Décale l'image vers le haut uniquement sur ordinateur sans rien casser */}
-         
-            <img 
-              src="/images/toussaint.jpg" 
-              alt="Photo de l'événement" 
-              className="max-w-[300px] mx-auto w-full h-auto object-cover "
-            />
+          <img 
+            src="/images/toussaint.jpg" 
+            alt="Photo de l'événement" 
+            className="max-w-[300px] mx-auto w-full h-auto object-cover"
+          />
         </div>
       </section>
-     {/* --- LIGNE DE SÉPARATION --- */}
-<hr className="my-12 border-gray-200" />
 
-<div className="mb-8">
-  <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-    RETRAITE 24H DANS SA PRÉSENCE
-  </h3>
-  <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
-    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
-    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
-  </div>
-  <p className="text-gray-500 italic mb-8">
-    Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus grande intimité avec Dieu et VIVRE sa présence. 
-  </p>
-  <p>
-    <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
-  </p>
-</div>
+      {/* --- LIGNE DE SÉPARATION --- */}
+      <hr className="my-12 border-gray-200" />
 
-{/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
-<section className="mb-12">
-  <h4 className="text-2xl font-bold text-black mb-6">Au programme :</h4>
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-    <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
-      
-      {/* Liste à puces propre */}
-      <ul className="list-disc list-inside space-y-2">
-        <li>Adoration chantée</li>
-        <li>Louange</li>
-        <li>Enseignement</li>
-        <li>Messes</li>
-        <li>Intercession</li>
-        <li>Confessions</li>
-        <li>Veillée de réparation à la Très Sainte Eucharistie</li>
-        <li>Prière pour la délivrance au cœur de la nuit</li>
-        <li>Chapelet</li>
-        <li>Vêpres et Laudes</li>
-      </ul>
+      <div className="mb-8">
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          RETRAITE 24H DANS SA PRÉSENCE
+        </h3>
+        <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
+        </div>
+        <p className="text-gray-500 italic mb-8">
+          Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus grande intimité avec Dieu et VIVRE sa présence. 
+        </p>
+        <p>
+          <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
+        </p>
+      </div>
 
-      <p>
-        <strong>Lieu : </strong> Maison Saint Vincent de Paul, 34 rue de Tournelles, 94240 L’Haÿ-Les-Roses
-      </p>
-      <p>
-        <strong>Tarifs (repas inclus) : </strong> 90€ chambre avec sanitaires / 75€ chambre sans sanitaires
-      </p>
-      <p>
-        <strong>Informations et inscription : </strong> adoronsjesusbagneux@gmail.com / 06.24.43.12.66
-      </p>
-    </div>
-    
-    {/* Image cliquable */}
-    <div className="cursor-pointer text-center" onClick={() => setIsOpen(true)}>
-      <img 
-        src="/images/retraite.jpg" 
-        alt="Photo de l'événement" 
-        className="max-w-[300px] mx-auto w-full h-auto object-cover hover:opacity-95 transition shadow-md rounded" 
-      />
-      <span className="text-xs text-gray-500 block mt-2">Cliquez pour agrandir l'image</span>
-    </div>
-  </div>
-</section>
+      {/* PRÉSENTATION AVEC L'IMAGE DE LA RETRAITE (CLIQUABLE) */}
+      <section className="mb-12">
+        <h4 className="text-2xl font-bold text-black mb-6">Au programme :</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
+            <ul className="list-disc list-inside space-y-2">
+              <li>Adoration chantée</li>
+              <li>Louange</li>
+              <li>Enseignement</li>
+              <li>Messes</li>
+              <li>Intercession</li>
+              <li>Confessions</li>
+              <li>Veillée de réparation à la Très Sainte Eucharistie</li>
+              <li>Prière pour la délivrance au cœur de la nuit</li>
+              <li>Chapelet</li>
+              <li>Vêpres et Laudes</li>
+            </ul>
 
-{/* Fenêtre modale gérée par l'état React */}
-{isOpen && (
-  <div 
-    className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer" 
-    onClick={() => setIsOpen(false)}
-  >
-    <span className="absolute top-5 right-8 text-white text-4xl font-bold cursor-pointer hover:text-gray-300">
-      &times;
-    </span>
-    <img 
-      src="/images/retraite.jpg" 
-      className="max-h-[90vh] max-w-[90vw] object-contain m-auto rounded cursor-default" 
-      alt="Agrandissement" 
-      onClick={(e) => e.stopPropagation()} // Évite de fermer si on clique sur l'image elle-même
-    />
-  </div>
-)}
+            <p>
+              <strong>Lieu : </strong> Maison Saint Vincent de Paul, 34 rue de Tournelles, 94240 L’Haÿ-Les-Roses
+            </p>
+            <p>
+              <strong>Tarifs (repas inclus) : </strong> 90€ chambre avec sanitaires / 75€ chambre sans sanitaires
+            </p>
+            <p>
+              <strong>Informations et inscription : </strong> adoronsjesusbagneux@gmail.com / 06.24.43.12.66
+            </p>
+          </div>
+          
+          <div className="cursor-pointer text-center" onClick={() => setIsRetraiteOpen(true)}>
+            <img 
+              src="/images/retraite.jpg" 
+              alt="Photo de l'événement" 
+              className="max-w-[300px] mx-auto w-full h-auto object-cover hover:opacity-95 transition shadow-md rounded" 
+            />
+            <span className="text-xs text-gray-500 block mt-2">Cliquez pour agrandir l'image</span>
+          </div>
+        </div>
+      </section>
 
-{/* --- LIGNE DE SÉPARATION --- */}
-<hr className="my-12 border-gray-200" />
+      {/* Fenêtre modale React pour le zoom de la retraite */}
+      {isRetraiteOpen && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer" 
+          onClick={() => setIsRetraiteOpen(false)}
+        >
+          <span className="absolute top-5 right-8 text-white text-4xl font-bold cursor-pointer hover:text-gray-300">
+            &times;
+          </span>
+          <img 
+            src="/images/retraite.jpg" 
+            className="max-h-[90vh] max-w-[90vw] object-contain m-auto rounded cursor-default" 
+            alt="Agrandissement" 
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
+      )}
 
-<div className="mb-8">
-<h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-  SOMMET EUCHARISTIQUE 1<sup>ère</sup> ÉDITION
-</h3>
+      {/* --- LIGNE DE SÉPARATION --- */}
+      <hr className="my-12 border-gray-200" />
+
+      <div className="mb-8">
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+          SOMMET EUCHARISTIQUE 1<sup>ère</sup> ÉDITION
+        </h3>
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">6 et 7 juin 2026</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Colombes(92)</span>
@@ -181,7 +179,6 @@ enseignement, intercession, confessions.
         <p className="text-gray-500 italic mb-8">Partenaires : Diocèse de Nanterre et Radio Maria</p>
       </div>
       
-      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
       <section className="mb-12">
         <h4 className="text-2xl font-bold text-black mb-6">Présentation</h4>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
@@ -193,28 +190,26 @@ enseignement, intercession, confessions.
               réveil eucharistique dans l’Eglise.
             </p>
             <p>
-  <strong>Au programme :</strong> adoration du Saint-Sacrement, louange, enseignements, 
-  veillée de guérison, exposition des miracles eucharistiques dans le monde créée par le Bienheureux Carlo Acutis et programme dédié pour les enfants.
-</p>
-<p className="mt-2">
-  <a 
-    href="https://radiomaria.fr/les-temps-forts-du-sommet-eucharistique-a-reecouter-en-podcast/" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-blue-600 hover:underline inline-block whitespace-nowrap md:whitespace-normal"
-  >
-    Les temps forts du Sommet Eucharistique<br />à réécouter en podcast&nbsp; 
-  </a>
-</p>
+              <strong>Au programme :</strong> adoration du Saint-Sacrement, louange, enseignements, 
+              veillée de guérison, exposition des miracles eucharistiques dans le monde créée par le Bienheureux Carlo Acutis et programme dédié pour les enfants.
+            </p>
+            <p className="mt-2">
+              <a 
+                href="https://radiomaria.fr/les-temps-forts-du-sommet-eucharistique-a-reecouter-en-podcast/" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-blue-600 hover:underline inline-block whitespace-nowrap md:whitespace-normal"
+              >
+                Les temps forts du Sommet Eucharistique<br />à réécouter en podcast&nbsp; 
+              </a>
+            </p>
           </div>
           
-          {/* AJOUT DE md:-mt-8 : Décale l'image vers le haut uniquement sur ordinateur sans rien casser */}
-         
-            <img 
-              src="/images/photoeven.jpg" 
-              alt="Photo de l'événement" 
-              className="max-w-[300px] mx-auto w-full h-auto object-cover "
-            />
+          <img 
+            src="/images/photoeven.jpg" 
+            alt="Photo de l'événement" 
+            className="max-w-[300px] mx-auto w-full h-auto object-cover" 
+          />
         </div>
       </section>
 
@@ -238,11 +233,10 @@ enseignement, intercession, confessions.
       {/* La ligne de séparation */}
       <hr className="my-12 border-gray-200" />
 
-      {/* 3. ALBUM VISUEL : NOUVEAU SYSTÈME DE GALERIE ET LIGHTBOX */}
+      {/* 3. ALBUM VISUEL : GALERIE ET LIGHTBOX */}
       <section className="mt-12 sm:mt-16">
         <h4 className="text-2xl font-bold text-black mb-8 text-center">Retour en images</h4>
         
-        {/* Grille des miniatures */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
           {images.map((src, index) => (
             <div 
@@ -262,13 +256,12 @@ enseignement, intercession, confessions.
         </div>
       </section>
 
-      {/* LE MODAL / LIGHTBOX (S'affiche uniquement lorsqu'une image est cliquée) */}
+      {/* LE MODAL / LIGHTBOX */}
       {lightboxIndex !== null && (
         <div 
           className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4 select-none backdrop-blur-sm"
-          onClick={() => setLightboxIndex(null)} // Clique n'importe où sur le fond noir pour fermer
+          onClick={() => setLightboxIndex(null)}
         >
-          {/* Bouton Fermer (Petite Croix) */}
           <button 
             onClick={() => setLightboxIndex(null)}
             className="absolute top-6 right-6 text-white text-4xl font-light hover:text-gray-300 transition p-2 z-50"
@@ -277,7 +270,6 @@ enseignement, intercession, confessions.
             ✕
           </button>
 
-          {/* Flèche Gauche (Précédent) */}
           <button 
             onClick={prevLightboxImage}
             className="absolute left-4 md:left-8 text-white text-4xl md:text-5xl font-light hover:text-gray-300 transition p-4 z-50"
@@ -286,17 +278,15 @@ enseignement, intercession, confessions.
             ‹
           </button>
 
-          {/* Image grand format au centre */}
           <div className="relative w-full max-w-4xl h-[70vh] md:h-[80vh]">
             <Image
               src={images[lightboxIndex]}
               alt={`Image zoomée ${lightboxIndex + 1}`}
               fill
-              className="object-contain" // Permet de voir toute l'image sans la recadrer
+              className="object-contain"
             />
           </div>
 
-          {/* Flèche Droite (Suivant) */}
           <button 
             onClick={nextLightboxImage}
             className="absolute right-4 md:right-8 text-white text-4xl md:text-5xl font-light hover:text-gray-300 transition p-4 z-50"
@@ -305,7 +295,6 @@ enseignement, intercession, confessions.
             ›
           </button>
 
-          {/* Indicateur textuel en bas */}
           <div className="absolute bottom-6 text-gray-400 text-sm font-semibold">
             {lightboxIndex + 1} / {images.length}
           </div>
