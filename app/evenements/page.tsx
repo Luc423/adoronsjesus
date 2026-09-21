@@ -40,7 +40,7 @@ export default function EvenementsPage() {
 
       {/* 1. Titre de l'évènement */}
       <div className="mb-8">
-    <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENT : <br></br>VEILLÉE DE PRIÈRES ET D’ADORATION&nbsp;</h3>
+    <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENTS : <br></br>VEILLÉES DE PRIÈRES ET D’ADORATION&nbsp;</h3>
   
 
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
@@ -86,6 +86,65 @@ enseignement, intercession, confessions.
             />
         </div>
       </section>
+      {/* --- LIGNE DE SÉPARATION --- */}
+      <hr className="my-12 border-gray-200" />
+
+<div className="mb-8">
+<h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+  RETRAITE 24H DANS SA PRÉSENCE
+</h3>
+        <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
+        </div>
+        <p className="text-gray-500 italic mb-8">Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus
+           grande intimité avec Dieu et VIVRE sa présence. </p>
+
+           <p>
+  <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
+</p>
+      </div>
+      
+      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
+      <section className="mb-12">
+        <h4 className="text-2xl font-bold text-black mb-6">Au programme :</h4>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
+            <p className="font-bold text-xl text-black"> </p>
+            <p>
+              -	Adoration chantée
+-	Louange
+-	Enseignement
+-	Messes 
+-	Intercession
+-	Confessions
+-	Veillée de réparation à la Très Sainte Eucharistie
+-	Prière pour la délivrance au cœur de la nuit
+-	Chapelet
+-	Vêpres et Laudes
+
+            </p>
+            <p>
+  <strong>Lieu : </strong> Maison Saint Vincent de Paul, 34 rue de Tournelles, 94240 L’Haÿ-Les-Roses
+</p>
+ <p>
+  <strong>Tarifs (repas inclus) : </strong> 90€ chambre avec sanitaires / 75€ chambre sans sanitaires
+</p><p>
+  <strong>Informations et inscription :  </strong> adoronsjesusbagneux@gmail.com / 06.24.43.12.66
+</p>
+
+          </div>
+          
+          {/* AJOUT DE md:-mt-8 : Décale l'image vers le haut uniquement sur ordinateur sans rien casser */}
+         
+            <img 
+              src="/images/retraite.jpg" 
+              alt="Photo de l'événement" 
+              className="max-w-[300px] mx-auto w-full h-auto object-cover "
+            />
+        </div>
+      </section>
+
 {/* --- LIGNE DE SÉPARATION --- */}
       <hr className="my-12 border-gray-200" />
 
