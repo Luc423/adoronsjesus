@@ -43,7 +43,7 @@ export default function EvenementsPage() {
 
       {/* 1. Titre de l'évènement */}
       <div className="mb-8">
-        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENTS : <br />VEILLÉES DE PRIÈRES ET D’ADORATION&nbsp;</h3>
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAINS ÉVÈNEMENTS:<br />VEILLÉE DE PRIÈRES ET D’ADORATION&nbsp;</h3>
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">31 octobre 2026</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Bagneux(92)</span>
@@ -103,7 +103,7 @@ enseignement, intercession, confessions.
           Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus grande intimité avec Dieu et VIVRE sa présence. 
         </p>
         <p>
-          <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
+          <strong>Thème :</strong>  “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
         </p>
       </div>
 
