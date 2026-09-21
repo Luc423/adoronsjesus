@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 // Génère un tableau de 20 images
 const images = Array.from({ length: 20 }, (_, i) => `/images/photo${i + 1}.jpg`);
+const [isOpen, setIsOpen] = useState(false);
 
 export default function EvenementsPage() {
   // Index de la photo actuellement zoomée (null si aucune n'est ouverte)
@@ -86,67 +87,88 @@ enseignement, intercession, confessions.
             />
         </div>
       </section>
-      {/* --- LIGNE DE SÉPARATION --- */}
-      <hr className="my-12 border-gray-200" />
+     {/* --- LIGNE DE SÉPARATION --- */}
+<hr className="my-12 border-gray-200" />
 
 <div className="mb-8">
-<h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-  RETRAITE 24H DANS SA PRÉSENCE
-</h3>
-        <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
-        </div>
-        <p className="text-gray-500 italic mb-8">Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus
-           grande intimité avec Dieu et VIVRE sa présence. </p>
+  <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
+    RETRAITE 24H DANS SA PRÉSENCE
+  </h3>
+  <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
+    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
+    <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
+  </div>
+  <p className="text-gray-500 italic mb-8">
+    Une retraite pour les cœurs assoiffés, pour tous ceux qui désirent entrer dans une plus grande intimité avec Dieu et VIVRE sa présence. 
+  </p>
+  <p>
+    <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
+  </p>
+</div>
 
-           <p>
-  <strong>Thème :</strong> : “Vous me chercherez et vous me trouverez ; Je me laisserai trouver par vous” Jérémie 29:13-14
-</p>
-      </div>
+{/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
+<section className="mb-12">
+  <h4 className="text-2xl font-bold text-black mb-6">Au programme :</h4>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+    <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
       
-      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
-      <section className="mb-12">
-        <h4 className="text-2xl font-bold text-black mb-6">Au programme :</h4>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
-            <p className="font-bold text-xl text-black"> </p>
-            <p>
-              -	Adoration chantée<br />
--	Louange<br />
--	Enseignement<br />
--	Messes <br />
--	Intercession<br />
--	Confessions<br />
--	Veillée de réparation à la Très Sainte Eucharistie<br />
--	Prière pour la délivrance au cœur de la nuit<br />
--	Chapelet<br />
--	Vêpres et Laudes<br />
+      {/* Liste à puces propre */}
+      <ul className="list-disc list-inside space-y-2">
+        <li>Adoration chantée</li>
+        <li>Louange</li>
+        <li>Enseignement</li>
+        <li>Messes</li>
+        <li>Intercession</li>
+        <li>Confessions</li>
+        <li>Veillée de réparation à la Très Sainte Eucharistie</li>
+        <li>Prière pour la délivrance au cœur de la nuit</li>
+        <li>Chapelet</li>
+        <li>Vêpres et Laudes</li>
+      </ul>
 
-            </p>
-            <p>
-  <strong>Lieu : </strong> Maison Saint Vincent de Paul, 34 rue de Tournelles, 94240 L’Haÿ-Les-Roses
-</p>
- <p>
-  <strong>Tarifs (repas inclus) : </strong> 90€ chambre avec sanitaires / 75€ chambre sans sanitaires
-</p><p>
-  <strong>Informations et inscription :  </strong> adoronsjesusbagneux@gmail.com / 06.24.43.12.66
-</p>
+      <p>
+        <strong>Lieu : </strong> Maison Saint Vincent de Paul, 34 rue de Tournelles, 94240 L’Haÿ-Les-Roses
+      </p>
+      <p>
+        <strong>Tarifs (repas inclus) : </strong> 90€ chambre avec sanitaires / 75€ chambre sans sanitaires
+      </p>
+      <p>
+        <strong>Informations et inscription : </strong> adoronsjesusbagneux@gmail.com / 06.24.43.12.66
+      </p>
+    </div>
+    
+    {/* Image cliquable */}
+    <div className="cursor-pointer text-center" onClick={() => setIsOpen(true)}>
+      <img 
+        src="/images/retraite.jpg" 
+        alt="Photo de l'événement" 
+        className="max-w-[300px] mx-auto w-full h-auto object-cover hover:opacity-95 transition shadow-md rounded" 
+      />
+      <span className="text-xs text-gray-500 block mt-2">Cliquez pour agrandir l'image</span>
+    </div>
+  </div>
+</section>
 
-          </div>
-          
-          {/* AJOUT DE md:-mt-8 : Décale l'image vers le haut uniquement sur ordinateur sans rien casser */}
-         
-            <img 
-              src="/images/retraite.jpg" 
-              alt="Photo de l'événement" 
-              className="max-w-[300px] mx-auto w-full h-auto object-cover "
-            />
-        </div>
-      </section>
+{/* Fenêtre modale gérée par l'état React */}
+{isOpen && (
+  <div 
+    className="fixed inset-0 z-50 bg-black/80 flex items-center justify-center p-4 cursor-pointer" 
+    onClick={() => setIsOpen(false)}
+  >
+    <span className="absolute top-5 right-8 text-white text-4xl font-bold cursor-pointer hover:text-gray-300">
+      &times;
+    </span>
+    <img 
+      src="/images/retraite.jpg" 
+      className="max-h-[90vh] max-w-[90vw] object-contain m-auto rounded cursor-default" 
+      alt="Agrandissement" 
+      onClick={(e) => e.stopPropagation()} // Évite de fermer si on clique sur l'image elle-même
+    />
+  </div>
+)}
 
 {/* --- LIGNE DE SÉPARATION --- */}
-      <hr className="my-12 border-gray-200" />
+<hr className="my-12 border-gray-200" />
 
 <div className="mb-8">
 <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
