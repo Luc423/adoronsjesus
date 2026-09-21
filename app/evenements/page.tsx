@@ -112,16 +112,16 @@ enseignement, intercession, confessions.
           <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
             <p className="font-bold text-xl text-black"> </p>
             <p>
-              -	Adoration chantée
--	Louange
--	Enseignement
--	Messes 
--	Intercession
--	Confessions
--	Veillée de réparation à la Très Sainte Eucharistie
--	Prière pour la délivrance au cœur de la nuit
--	Chapelet
--	Vêpres et Laudes
+              -	Adoration chantée<br />
+-	Louange<br />
+-	Enseignement<br />
+-	Messes <br />
+-	Intercession<br />
+-	Confessions<br />
+-	Veillée de réparation à la Très Sainte Eucharistie<br />
+-	Prière pour la délivrance au cœur de la nuit<br />
+-	Chapelet<br />
+-	Vêpres et Laudes<br />
 
             </p>
             <p>
