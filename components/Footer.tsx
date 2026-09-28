@@ -30,7 +30,7 @@ const Footer = () => {
             <h3 className="text-white font-bold mb-2">Suivez-nous</h3>
             {/* justify-center pour centrer les icônes sur mobile */}
            <div className="flex justify-center md:justify-start gap-6 text-xl">
-  <a href="#" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaFacebook /></a>
+  <a href="https://www.facebook.com/profile.php?id=61593916825178" target="_blank" rel="noopener noreferrer" className="hover:text-blue-500 transition-colors"><FaFacebook /></a>
   <a href="https://www.instagram.com/adorons_jesus_" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500 transition-colors"><FaInstagram /></a>
   <a href="https://www.youtube.com/@adoronsjesusbagneux" target="_blank" rel="noopener noreferrer" className="hover:text-red-600 transition-colors"><FaYoutube /></a>
 </div>
