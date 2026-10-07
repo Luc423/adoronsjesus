@@ -109,11 +109,11 @@ export default function Home() {
           <div className="md:col-span-7 flex flex-col items-center text-center font-serif text-gray-800 space-y-5">
             
             <h3 className="text-2xl sm:text-3xl font-bold text-black font-serif">
-              Reprise !
+             Grande Veillée de prières et d’adoration
             </h3>
             
             <p className="text-xl sm:text-2xl font-bold text-black font-serif">
-              Samedi 3 Octobre
+              Samedi 31 Octobre
             </p>
             
             <p className="text-xl sm:text-2xl font-bold text-black font-serif">
@@ -121,17 +121,22 @@ export default function Home() {
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
-              Nous avons hâte de vous retrouver, après la pause estivale, pour commencer cette nouvelle saison, 
-              unis dans l'adoration et passionnés pour Jésus-Eucharistie.
+             Nous vous invitons à vivre un temps fort au cœur de l’intercession et de l’adoration :
+             un rendez-vous incontournable !
+            </p>
+             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
+             Nous nous tournerons vers les Saints de l’Église, afin qu’ils intercèdent pour nous et avec
+             nous, pour notre assemblée, nos familles et toutes les situations que nous portons dans nos
+              vies.
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
-              Nous croyons que Dieu nous attend dans sa présence pour nous révéler davantage son cœur eucharistique 
-              et nous entraîner dans une adoration toujours plus profonde.<br /> Soyons prêts&nbsp;!
+             Alors que le monde célébrera Halloween en cette date, nous choisissons, nous, adorateurs,
+              de nous rassembler pour invoquer le Dieu trois fois Saint, celui qui est notre Lumière.<br /> &nbsp;
             </p>
             
             <p className="text-base sm:text-lg font-bold text-black font-serif pt-2">
-              Rendez-vous à la rentrée,
+              Invitez largement autour de vous et venez nombreux !
             </p>
             
             <p className="text-base sm:text-lg font-bold italic text-blue-900 font-serif">
