@@ -117,7 +117,7 @@ export default function Home() {
             </p>
             
             <p className="text-xl sm:text-2xl font-bold text-black font-serif">
-              16h30
+              19h30
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
