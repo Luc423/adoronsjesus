@@ -109,36 +109,36 @@ export default function Home() {
           <div className="md:col-span-7 flex flex-col items-center text-center font-serif text-gray-800 space-y-5">
             
             <h3 className="text-2xl sm:text-3xl font-bold text-black font-serif">
-             Grande Veillée de prières et d’adoration
+             adoration
             </h3>
             
             <p className="text-xl sm:text-2xl font-bold text-black font-serif">
-              Samedi 31 Octobre
+              Samedi 14 Novembre
             </p>
             
             <p className="text-xl sm:text-2xl font-bold text-black font-serif">
-              19h30
+              16h30
             </p>
             
             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
-             Nous vous invitons à vivre un temps fort au cœur de l’intercession et de l’adoration :
-             un rendez-vous incontournable !
+             Nous vous invitons à notre temp d’adoration mensuel, sur le thème :
+             « Tu visites la terre et tu l’abreuves...tu prépares les moissons » 
+                              Psaume 65 :10
             </p>
              <p className="text-base sm:text-lg leading-relaxed max-w-xl">
-             Nous nous tournerons vers les Saints de l’Église, afin qu’ils intercèdent pour nous et avec
-             nous, pour notre assemblée, nos familles et toutes les situations que nous portons dans nos
-              vies.
+            Comme la terre a besoin d’eau pour porter du fruit, nos vies ont besoin de la 
+                 présence de Dieu pour être renouvelées, fortifiées et fécondées.
             </p>
-            
             <p className="text-base sm:text-lg leading-relaxed max-w-xl">
-             Alors que le monde célébrera Halloween en cette date, nous choisissons, nous, adorateurs,
-              de nous rassembler pour invoquer le Dieu trois fois Saint, celui qui est notre Lumière.<br /> &nbsp;
+            Dieu est celui qui visite, qui abreuve, qui restaure et qui prépare les moissons. 
+             Même lorsque nous ne voyons pas encore les fruits, il est à l'œuvre dans nos vies,
+            arrosant les semences déposées dans nos cœurs et préparant une récolte en son temps.
+<br />
             </p>
-            
             <p className="text-base sm:text-lg font-bold text-black font-serif pt-2">
-              Invitez largement autour de vous et venez nombreux !
+              Nous vous invitons à venir ensemble dans sa Présence, pour l'adorer, nous laisser
+               remplir de son Esprit et accueillir cette pluie de grâce qui prépare les moissons à venir.
             </p>
-            
             <p className="text-base sm:text-lg font-bold italic text-blue-900 font-serif">
               Le Noyau Adorons Jésus
             </p>

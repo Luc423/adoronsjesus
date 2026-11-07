@@ -41,60 +41,11 @@ export default function EvenementsPage() {
         </h2>
       </div>
 
-      {/* 1. Titre de l'évènement */}
-      <div className="mb-8">
-        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAINS ÉVÈNEMENTS:<br />VEILLÉE DE PRIÈRES ET D’ADORATION&nbsp;</h3>
-        <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">31 octobre 2026</span>
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Bagneux(92)</span>
-        </div>
-      </div>
 
-      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
-      <section className="mb-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-          <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
-            <p>
-             Dans le cadre de la Vigile de la Toussaint, nous vous
-invitons à notre grande Veillée de prières et d’adoration.
-Nous prierons pour vous en invoquant l'intercession de
-tous les saints en la présence réelle de Dieu.
-            </p>
-            <p>
-             Un rendez-vous incontournable de notre année.
-            </p>
-            <p>
-              <strong>Au programme :</strong> chapelet aux flambeaux, adoration,
-enseignement, intercession, confessions.
-            </p>
-            <p>
-              <strong>Dress code : </strong> tous en blanc ! 
-            </p>
-            <p>
-              <strong>
-                Rendez-vous Samedi 31 Octobre<br />
-                Eglise St Hermeland<br />
-                Accueil à partir de 19h30<br />
-                Veillée 20h-23h
-              </strong>
-            </p>
-          </div>
-          
-          <img 
-            src="/images/toussaint.jpg" 
-            alt="Photo de l'événement" 
-            className="max-w-[300px] mx-auto w-full h-auto object-cover"
-          />
-        </div>
-      </section>
-
-      {/* --- LIGNE DE SÉPARATION --- */}
       <hr className="my-12 border-gray-200" />
 
       <div className="mb-8">
-        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">
-          RETRAITE 24H DANS SA PRÉSENCE
-        </h3>
+         <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAINS ÉVÈNEMENTS:<br />RETRAITE 24H DANS SA PRÉSENCE&nbsp;</h3>
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
@@ -163,7 +114,55 @@ enseignement, intercession, confessions.
             onClick={(e) => e.stopPropagation()} 
           />
         </div>
-      )}
+      )} 
+      {/* --- LIGNE DE SÉPARATION --- */}
+      <hr className="my-1 border-gray-200" />
+      {/* 1. Titre de l'évènement */}
+      <div className="mb-8">
+        <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4"><br />VEILLÉE DE PRIÈRES ET D’ADORATION&nbsp;</h3>
+        <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">31 octobre 2026</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Bagneux(92)</span>
+        </div>
+      </div>
+
+      {/* 2. PRÉSENTATION AVEC L'IMAGE À DROITE */}
+      <section className="mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+          <div className="text-gray-700 leading-relaxed space-y-4 text-lg">
+            <p>
+             Dans le cadre de la Vigile de la Toussaint, nous vous
+invitons à notre grande Veillée de prières et d’adoration.
+Nous prierons pour vous en invoquant l'intercession de
+tous les saints en la présence réelle de Dieu.
+            </p>
+            <p>
+             Un rendez-vous incontournable de notre année.
+            </p>
+            <p>
+              <strong>Au programme :</strong> chapelet aux flambeaux, adoration,
+enseignement, intercession, confessions.
+            </p>
+            <p>
+              <strong>Dress code : </strong> tous en blanc ! 
+            </p>
+            <p>
+              <strong>
+                Rendez-vous Samedi 31 Octobre<br />
+                Eglise St Hermeland<br />
+                Accueil à partir de 19h30<br />
+                Veillée 20h-23h
+              </strong>
+            </p>
+          </div>
+          
+          <img 
+            src="/images/toussaint.jpg" 
+            alt="Photo de l'événement" 
+            className="max-w-[300px] mx-auto w-full h-auto object-cover"
+          />
+        </div>
+      </section>
 
       {/* --- LIGNE DE SÉPARATION --- */}
       <hr className="my-12 border-gray-200" />
