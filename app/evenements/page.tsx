@@ -45,9 +45,9 @@ export default function EvenementsPage() {
       <hr className="my-12 border-gray-200" />
 
       <div className="mb-8">
-         <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAINS ÉVÈNEMENTS:<br />RETRAITE 24H DANS SA PRÉSENCE&nbsp;</h3>
+         <h3 className="text-3xl sm:text-4xl font-bold text-black mb-4">PROCHAIN ÉVÈNEMENT:<br />RETRAITE 24H DANS SA PRÉSENCE&nbsp;</h3>
         <div className="flex flex-wrap gap-4 text-gray-600 font-semibold mb-6">
-          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">Du 13 février 10h au 14 février 10h</span>
+          <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">2027:Du 13 février 10h au 14 février 10h</span>
           <span className="bg-gray-100 text-gray-800 px-3 py-1 rounded text-sm sm:text-base">L’Haÿ-Les-Roses(94)</span>
         </div>
         <p className="text-gray-500 italic mb-8">

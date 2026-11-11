@@ -6,8 +6,8 @@ export default function RendezVousPage() {
     { date: "Samedi 14 novembre 2026", heure: "16h30" },
     { date: "Samedi 12 décembre 2026", heure: "16h30" },
     { date: "Samedi 9 janvier 2027", heure: "16h30" },
-    { date: "Samedi 13 février 2027", heure: "16h30" },
-    { date: "Samedi 13 mars 2027", heure: "16h30" },
+    { date: "Samedi 13 février 2027", heure: "Voir page évènements" },
+    { date: "Samedi 6 mars 2027", heure: "16h30" },
     { date: "Samedi 10 avril 2027", heure: "16h30" },
     { date: "Samedi 1ᵉʳ mai 2027", heure: "16h30" },
   ];
