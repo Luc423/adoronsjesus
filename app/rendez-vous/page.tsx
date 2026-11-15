@@ -41,7 +41,9 @@ export default function RendezVousPage() {
               >
                 <span className="text-black font-light text-xl">•</span>
                 <span className="font-medium">{item.date}</span>
-                <span className="text-gray-400 italic">à {item.heure}</span>
+                <span className="text-gray-400 italic">
+                  {item.heure.includes("Voir") ? item.heure : `à ${item.heure}`}
+                </span>
               </li>
             ))}
           </ul>
